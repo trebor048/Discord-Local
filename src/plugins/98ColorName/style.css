@@ -1,0 +1,15 @@
+:root {
+    --98-message-color-saturation: /*DYNAMIC*/;
+}
+
+div[class*="messageContent_"] {
+    animation:
+        100s
+        _98-message-color-interpolate
+        paused
+        calc(-1s * var(--98-message-color-saturation))
+        !important;
+}
+@keyframes _98-message-color-interpolate {
+    to {color: var(--98-message-color)}
+}
